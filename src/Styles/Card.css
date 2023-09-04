@@ -1,0 +1,44 @@
+#concepts {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .concept {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: -1.1%;
+    gap: 1rem;
+    background: linear-gradient(#400d0c, #8c1b1a, #c02b25);
+    padding-bottom: 2rem;
+    border-radius: 6px;
+    box-shadow: 0px 12px 20px #97301c;
+    width: 25vw;
+    transition: all 0.4s;
+  }
+  
+  .concept:hover {
+    transform: translateY(-2px);
+    transition: transform 0.2s;
+    box-shadow: 0 16px 30px #ff543293;
+  }
+  
+  .concept img {
+    width: 6rem;
+    height: 5rem;
+    object-fit: contain;
+  }
+  
+  .concept h2 {
+    margin: 0;
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+  
+  .concept p {
+    margin: 0;
+    text-align: center;
+    font-size: 0.85rem;
+  }

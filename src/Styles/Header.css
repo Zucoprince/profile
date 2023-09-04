@@ -1,0 +1,27 @@
+header {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.555);
+  }
+  
+  header img {
+    width: 7rem;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgb(189, 41, 36);
+    /* -webkit-text-stroke: 0.3px rgb(189, 41, 36); */
+  }
+  
+  header p {
+    margin: 0;
+    color: white;
+  }
