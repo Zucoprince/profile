@@ -1,6 +1,10 @@
 import { useState } from "react";
 import "../Styles/Card.css";
-import keyConceptsImage from '../assets/images/zuko.png';
+import eu from '../assets/images/eu.jpg';
+import whats from '../assets/images/whatsapp.png';
+import linkedin from '../assets/images/linkedin.png';
+import git from '../assets/images/github.png';
+import cv from '../assets/images/curriculum-vitae.png';
 
 export default function Card() {
     const content = [
@@ -21,9 +25,31 @@ export default function Card() {
     const [activeContentIndex, setActiveContentIndex] = useState(0);
     return (
         <ul id="concepts">
-            <li className="concept">
-                <img src={keyConceptsImage} alt="TODO: TITLE" />
-                <div id="tabs">
+            <div className="concept">
+                <div>
+                </div>
+                <div className="avatar-div">
+                    <img className="avatar" src={eu} alt="Avatar Zucolo" />
+                </div>
+                <div className="icones-div">
+                    <div className="icones-esq">
+                        <a href="https://wa.me/5519996162312" target="_blank">
+                            <img className="icones" src={whats} alt="WhatsApp Icon" />
+                        </a>
+                        <a href="https://www.linkedin.com/in/pedrozucolo/" target="_blank">
+                            <img className="icones" src={linkedin} alt="Linkedin Icon" />
+                        </a>
+                    </div>
+                    <div className="icones-dir">
+                        <a href="https://github.com/Zucoprince/" target="_blank">
+                            <img className="icones" src={git} alt="GitHub Icon" />
+                        </a>
+                        <a href="##" target="_blank">
+                            <img className="icones" src={cv} alt="Curriculum Icon" />
+                        </a>
+                    </div>
+                </div>
+                <div className="tabs">
                     <menu>
                         <button
                             className={activeContentIndex === 0 ? "active" : ""}
@@ -50,7 +76,7 @@ export default function Card() {
                             Outros
                         </button>
                     </menu>
-                    <div id="tab-content">
+                    <div className="tab-content">
                         <ul>
                             {content[activeContentIndex].map((item) => (
                                 <li key={item}>{item}</li>
@@ -58,7 +84,7 @@ export default function Card() {
                         </ul>
                     </div>
                 </div>
-            </li>
+            </div>
         </ul>
     )
 }

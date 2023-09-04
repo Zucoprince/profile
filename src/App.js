@@ -3,10 +3,12 @@ import Card from './Components/Card';
 
 export default function App() {
   return (
-    <>
-      <div className='background'></div>
+    <main>
       <Header />
-      <Card />
-    </>
+      <body>
+        <div className='background'></div>
+        <Card />
+      </body>
+    </main>
   );
 }

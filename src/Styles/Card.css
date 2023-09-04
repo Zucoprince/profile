@@ -1,5 +1,7 @@
 #concepts {
     display: flex;
+    align-items: center;
+    padding-right: 46px;
     justify-content: center;
   }
   
@@ -8,37 +10,110 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
-    left: -1.1%;
     gap: 1rem;
-    background: linear-gradient(#400d0c, #8c1b1a, #c02b25);
+    background: linear-gradient(#00000081 -30%, #8c1c1a, #c02b25);
+    padding-top: 60px;
     padding-bottom: 2rem;
+    border: 2px solid black;
+    border-top: none;
     border-radius: 6px;
-    box-shadow: 0px 12px 20px #97301c;
-    width: 25vw;
+    box-shadow: 0px 12px 20px #000000;
+    max-width: 500px;
     transition: all 0.4s;
   }
   
   .concept:hover {
     transform: translateY(-2px);
     transition: transform 0.2s;
-    box-shadow: 0 16px 30px #ff543293;
+    box-shadow: 0 16px 30px #000000;
+  }
+
+  .tabs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-right: 40px;
+    font-size: 100%;
+    background-color: transparent;
+  }
+
+  .tabs button {
+    background-color: transparent;
+    padding: 0.6rem;
+    height: 32px;
+    width: 80px;
+    border-radius: 10px 10px 0 0;
+    font-size: 60%;
+    border: 0.5px solid black;
+    border-bottom: none;
   }
   
-  .concept img {
-    width: 6rem;
-    height: 5rem;
-    object-fit: contain;
+  .tabs button:hover {
+    transform: translateY(-2px);
+    transition: transform 0.2s;
+    background: linear-gradient(#e71d16, #e7161646, transparent);
+    cursor: pointer;
   }
-  
-  .concept h2 {
-    margin: 0;
-    font-size: 1rem;
-    text-transform: uppercase;
+
+  .tabs button.active {
+    transform: translateY(-2px);
+    background: linear-gradient(#e71d16, #e7161646, transparent);
   }
-  
-  .concept p {
-    margin: 0;
-    text-align: center;
-    font-size: 0.85rem;
+
+  .tab-content ul {
+    list-style: none;
+    -webkit-text-stroke: 0.5px rgb(48, 11, 11);
+  }
+
+  .avatar {
+    background-color: white;
+    height: auto;
+    width: 100%;
+  }
+
+  .avatar-div {
+    display: flex;
+    margin-top: -6rem;
+    align-items: center;
+    border-radius: 50%;
+    border: 2px groove white;
+    overflow: hidden;
+    height: 100px;
+    width: 100px;
+    box-shadow: 0px 5px 30px black;
+    transition: transform 0.2s;
+  }
+
+  .avatar-div:hover {
+    transform: translateY(-10px);
+    transition: transform 0.2s;
+  }
+
+  .icones {
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+
+  .icones:hover {
+    transform: translateY(-2px);
+    transition: transform 0.2s;
+    box-shadow: 3px 6px 20px black;
+  }
+
+  .icones-div {
+    display: flex;
+    gap: 200px;
+    margin-top: -4rem;
+  }
+
+  .icones-esq {
+    display: flex;
+    gap: 50px;
+  }
+
+  .icones-dir {
+    display: flex;
+    gap: 50px;
   }

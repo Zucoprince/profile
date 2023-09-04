@@ -1,12 +1,13 @@
 header {
-    padding: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 3rem;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.555);
+    background: linear-gradient(to bottom, #000000 65%, transparent);
   }
   
   header img {
