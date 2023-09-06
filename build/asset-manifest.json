@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/ReactProject/static/css/main.bc9f4323.css",
+    "main.css": "/ReactProject/static/css/main.70bd582e.css",
     "main.js": "/ReactProject/static/js/main.f4554f82.js",
     "static/media/eu.jpg": "/ReactProject/static/media/eu.346a7bb360b415cebf13.jpg",
     "static/media/red_def.jpg": "/ReactProject/static/media/red_def.5adac965f27dd88c4525.jpg",
@@ -8,11 +8,11 @@
     "static/media/whatsapp.png": "/ReactProject/static/media/whatsapp.c0139bed7dc4beda41a1.png",
     "static/media/github.png": "/ReactProject/static/media/github.05f6c17b8cd04c28456f.png",
     "index.html": "/ReactProject/index.html",
-    "main.bc9f4323.css.map": "/ReactProject/static/css/main.bc9f4323.css.map",
+    "main.70bd582e.css.map": "/ReactProject/static/css/main.70bd582e.css.map",
     "main.f4554f82.js.map": "/ReactProject/static/js/main.f4554f82.js.map"
   },
   "entrypoints": [
-    "static/css/main.bc9f4323.css",
+    "static/css/main.70bd582e.css",
     "static/js/main.f4554f82.js"
   ]
 }

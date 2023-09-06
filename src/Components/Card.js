@@ -7,27 +7,6 @@ import git from "../assets/images/github.png";
 import cv from "../assets/images/curriculum-vitae.png";
 
 export default function Card() {
-  // Caminho para o arquivo PDF que você deseja disponibilizar para download
-  const filePath =
-    "src/assets/files/Currículo-Pedro-Zucolo-Def.pdf";
-
-  // Manipulador de clique para a imagem
-  const handleImageClick = () => {
-    // Cria um elemento de âncora temporário
-    const link = document.createElement("a");
-    link.href = filePath;
-
-    // Define o atributo 'download' para informar ao navegador que é um download
-    link.setAttribute("download", "Currículo-Pedro-Zucolo-Def.pdf"); // Especifique o nome do arquivo a ser baixado
-
-    // Simula um clique no link para iniciar o download
-    document.body.appendChild(link);
-    link.click();
-
-    // Remove o elemento de âncora temporário
-    document.body.removeChild(link);
-  };
-
   const content = [
     [
       "Minha experiência predominante recai no domínio do PHP, com foco especial no desenvolvimento utilizando o framework Laravel. Esta linguagem é aquela na qual possuo uma sólida intimidade e fluência no momento.",
@@ -44,6 +23,13 @@ export default function Card() {
   ];
 
   const [activeContentIndex, setActiveContentIndex] = useState(0);
+  const [botaoAtivo, setBotaoAtivo] = useState(false);
+  const [ulKey, setUlKey] = useState(0); // Adicione o estado para a chave única do <ul>
+
+  const alternarBotao = () => {
+    setBotaoAtivo(!botaoAtivo);
+    setUlKey(ulKey + 1); // Atualize a chave única do <ul> para reiniciar
+  };
   return (
     <ul id="concepts">
       <div className="concept">
@@ -64,7 +50,10 @@ export default function Card() {
             <a href="https://github.com/Zucoprince/" target="_blank">
               <img className="icones" src={git} alt="GitHub Icon" />
             </a>
-            <a href="https://drive.google.com/file/d/1gNRBzhP6eSiu6YZ_tMTwa2mUJKeyx0fM/view?usp=drive_link" target="_blank">
+            <a
+              href="https://drive.google.com/file/d/1gNRBzhP6eSiu6YZ_tMTwa2mUJKeyx0fM/view?usp=drive_link"
+              target="_blank"
+            >
               <img className="icones" src={cv} alt="Curriculum Icon" />
             </a>
           </div>
@@ -73,31 +62,43 @@ export default function Card() {
           <menu>
             <button
               className={activeContentIndex === 0 ? "active" : ""}
-              onClick={() => setActiveContentIndex(0)}
+              onClick={() => {
+                setActiveContentIndex(0);
+                alternarBotao();
+              }}
             >
               Back-End
             </button>
             <button
               className={activeContentIndex === 1 ? "active" : ""}
-              onClick={() => setActiveContentIndex(1)}
+              onClick={() => {
+                setActiveContentIndex(1);
+                alternarBotao();
+              }}
             >
               Front-End
             </button>
             <button
               className={activeContentIndex === 2 ? "active" : ""}
-              onClick={() => setActiveContentIndex(2)}
+              onClick={() => {
+                setActiveContentIndex(2);
+                alternarBotao();
+              }}
             >
               Banco de Dados
             </button>
             <button
               className={activeContentIndex === 3 ? "active" : ""}
-              onClick={() => setActiveContentIndex(3)}
+              onClick={() => {
+                setActiveContentIndex(3);
+                alternarBotao();
+              }}
             >
               Outros
             </button>
           </menu>
           <div className="tab-content">
-            <ul>
+            <ul key={ulKey} id="content">
               {content[activeContentIndex].map((item) => (
                 <li key={item}>{item}</li>
               ))}
