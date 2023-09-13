@@ -1,0 +1,47 @@
+.icones {
+  height: 30px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.icones:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s;
+  box-shadow: 3px 6px 20px black;
+}
+
+.icones-div {
+  display: flex;
+  gap: 200px;
+  margin-top: -4rem;
+}
+
+.icones-esq {
+  display: flex;
+  gap: 50px;
+}
+
+.icones-dir {
+  display: flex;
+  gap: 50px;
+}
+
+@media (max-width: 768px) {
+  .icones-div {
+    display: flex;
+    gap: 120px;
+    margin-top: -4rem;
+  }
+
+  .icones-esq {
+    display: flex;
+    gap: 50px;
+    margin-left: 10px;
+  }
+
+  .icones-dir {
+    display: flex;
+    gap: 50px;
+    margin-right: 10px;
+  }
+}

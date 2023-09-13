@@ -1,186 +1,74 @@
 #concepts {
-    display: flex;
-    align-items: center;
-    padding-right: 46px;
-    justify-content: center;
-  }
-  
-  .concept {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    background: linear-gradient(#00000062 -20%, #ffffff);
-    padding-top: 60px;
-    padding-bottom: 2rem;
-    border: 2px solid black;
-    border-top: none;
-    border-radius: 6px;
-    box-shadow: 10px 14px 20px #e71d16;
-    max-width: 500px;
-    transition: all 0.4s;
-    animation: fadeSlideIn 1s ease-in-out;
-  }
-  
-  .concept:hover {
-    transform: translateY(-2px);
-    transition: transform 0.2s;
-    box-shadow: 14px 14px 40px #e71d16;
-  }
+  display: flex;
+  align-items: center;
+  padding-right: 46px;
+  justify-content: center;
+}
 
-  .tabs {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-right: 40px;
-    font-size: 100%;
-    background-color: transparent;
-  }
+.concept {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background: linear-gradient(#00000062 -20%, #ffffff);
+  padding-top: 60px;
+  padding-bottom: 2rem;
+  border: 2px solid black;
+  border-top: none;
+  border-radius: 6px;
+  box-shadow: 10px 14px 20px #e71d16;
+  max-width: 500px;
+  transition: all 0.4s;
+  animation: fadeSlideIn 1s ease-in-out;
+}
 
-  .tabs button {
-    background-color: transparent;
-    padding: 0.6rem;
-    height: 32px;
-    width: 80px;
-    margin-left: 3px;
-    border-radius: 10px 10px 0 0;
-    font-size: 60%;
-    border: 2px solid black;
-    border-bottom: none;
-  }
-  
-  .tabs button:hover {
-    transform: translateY(-2px);
-    transition: transform 0.2s;
-    background: linear-gradient(#e71d16 -90%, transparent);
-    cursor: pointer;
-  }
+.concept:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s;
+  box-shadow: 14px 14px 40px #e71d16;
+}
 
-  .tabs button.active {
-    transform: translateY(-2px);
-    background: linear-gradient(#e71d16 -90%, transparent);
-  }
+.avatar {
+  background-color: white;
+  height: auto;
+  width: 100%;
+}
 
-  #content {
-    animation: fadeIn 1s ease-in-out;
-  }
+.avatar-div {
+  display: flex;
+  margin-top: -6rem;
+  align-items: center;
+  border-radius: 50%;
+  border: 4px solid black;
+  overflow: hidden;
+  height: 100px;
+  width: 100px;
+  box-shadow: 0px 5px 30px black;
+  transition: transform 0.2s;
+}
 
-  .tab-content ul {
-    list-style: none;
-    -webkit-text-stroke: 0.5px rgb(48, 11, 11);
-  }
+.avatar-div:hover {
+  transform: translateY(-10px);
+  transition: transform 0.2s;
+}
 
-  .avatar {
-    background-color: white;
-    height: auto;
-    width: 100%;
+@keyframes slideIn {
+  from {
+    transform: translateX(200px);
   }
-
-  .avatar-div {
-    display: flex;
-    margin-top: -6rem;
-    align-items: center;
-    border-radius: 50%;
-    border: 4px solid black;
-    overflow: hidden;
-    height: 100px;
-    width: 100px;
-    box-shadow: 0px 5px 30px black;
-    transition: transform 0.2s;
+  to {
+    transform: translateX(0px);
   }
+}
 
-  .avatar-div:hover {
-    transform: translateY(-10px);
-    transition: transform 0.2s;
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(200px);
   }
-
-  .icones {
-    height: 30px;
-    cursor: pointer;
-    transition: transform 0.2s;
+  to {
+    opacity: 1;
+    transform: translateX(0px);
   }
-
-  .icones:hover {
-    transform: translateY(-2px);
-    transition: transform 0.2s;
-    box-shadow: 3px 6px 20px black;
-  }
-
-  .icones-div {
-    display: flex;
-    gap: 200px;
-    margin-top: -4rem;
-  }
-
-  .icones-esq {
-    display: flex;
-    gap: 50px;
-  }
-
-  .icones-dir {
-    display: flex;
-    gap: 50px;
-  }
-
-  @media (max-width: 768px){
-    .icones-div {
-      display: flex;
-      gap: 120px;
-      margin-top: -4rem;
-    }
-
-    .icones-esq {
-      display: flex;
-      gap: 50px;
-      margin-left: 10px;
-    }
-
-    .icones-dir {
-      display: flex;
-      gap: 50px;
-      margin-right: 10px;
-    }
-
-    .tabs button {
-      background-color: transparent;
-      padding: 0.6rem;
-      height: 32px;
-      width: 67px;
-      margin-left: 3px;
-      border-radius: 10px 10px 0 0;
-      font-size: 60%;
-      border: 2px solid black;
-      border-bottom: none;
-    }
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  @keyframes slideIn {
-    from {
-      transform: translateX(200px);
-    }
-    to {
-      transform: translateX(0px);
-    }
-  }
-  
-  @keyframes fadeSlideIn {
-    from {
-      opacity: 0;
-      transform: translateX(200px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0px);
-    }
-  }
+}
